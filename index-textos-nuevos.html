@@ -1,0 +1,441 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CHER × Nacho Mer — El perfume de sus 15 · BIG</title>
+<meta name="description" content="Propuesta BIG para CHER: que el perfume de sus 15 sea CHER, regalado por Nacho Mer en su charla con la cumpleañera.">
+<style>
+  :root{
+    --bg:#F8F7F4; --ink:#1B1B1B; --muted:#606060; --line:#D9D9D6; --white:#FFFFFF;
+    --font:'Helvetica Neue Brand','Helvetica Neue',Helvetica,Arial,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--ink);font-family:var(--font);font-weight:400;line-height:1.5;-webkit-font-smoothing:antialiased}
+  img{max-width:100%;display:block}
+  a{color:inherit}
+  .wrap{max-width:1240px;margin:0 auto;padding:0 32px}
+  .kicker{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+  h1,h2,h3{font-weight:400;letter-spacing:-.02em;line-height:1.02}
+  h2{font-size:clamp(38px,6vw,84px)}
+  h2 em,h1 em{font-style:normal;color:var(--muted)}
+  .lead{font-size:clamp(18px,1.7vw,22px);max-width:660px}
+  .body{color:var(--muted);max-width:560px}
+  section{padding:140px 0;border-top:1px solid var(--line)}
+  .btn{display:inline-block;background:var(--ink);color:var(--white);text-decoration:none;font-size:12px;letter-spacing:.16em;text-transform:uppercase;padding:18px 34px;border:1px solid var(--ink);transition:.25s}
+  .btn:hover{background:transparent;color:var(--ink)}
+  .btn.ghost{background:transparent;color:var(--ink)}
+  .btn.ghost:hover{background:var(--ink);color:var(--white)}
+
+  /* NAV */
+  header.nav{position:sticky;top:0;z-index:50;background:rgba(248,247,244,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  .nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px;gap:24px}
+  .lockup{display:flex;align-items:center;gap:14px;text-decoration:none;white-space:nowrap}
+  .lockup img{height:18px;width:auto}
+  .lockup .x{color:var(--muted);font-size:14px}
+  .lockup .talent{font-size:13px;letter-spacing:.2em;text-transform:uppercase}
+  .nav ul{display:flex;gap:26px;list-style:none}
+  .nav ul a{font-size:11px;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;color:var(--muted)}
+  .nav ul a:hover,.nav ul a.on{color:var(--ink)}
+  .progress{position:absolute;left:0;bottom:-1px;height:1px;background:var(--ink);width:0}
+  @media (max-width:980px){.nav ul{display:none}}
+
+  /* HERO */
+  .hero{padding:0;border-top:0;min-height:calc(100vh - 64px);display:grid;grid-template-columns:1.05fr .95fr}
+  .hero .copy{padding:9vh 6vw 8vh 32px;display:flex;flex-direction:column;justify-content:space-between;gap:48px;max-width:680px;margin-left:auto;width:100%}
+  .hero h1{font-size:clamp(56px,8.6vw,132px)}
+  .hero .sub{font-size:clamp(17px,1.5vw,20px);max-width:460px;color:var(--muted)}
+  .hero .media{position:relative;background:var(--white);display:flex;align-items:center;justify-content:center;overflow:hidden;border-left:1px solid var(--line)}
+  .hero .media img{width:78%;max-width:560px;mix-blend-mode:multiply}
+  .hero .tag{position:absolute;bottom:28px;left:28px;right:28px;display:flex;justify-content:space-between}
+  .scroll{font-size:11px;letter-spacing:.18em;text-transform:uppercase;text-decoration:none;display:inline-flex;gap:10px;align-items:center}
+  .scroll::after{content:"";width:40px;height:1px;background:var(--ink)}
+  @media (max-width:880px){.hero{grid-template-columns:1fr}.hero .media{min-height:60vh;border-left:0;border-top:1px solid var(--line)}.hero .copy{padding:64px 32px}}
+
+  /* SPLIT / QUOTE */
+  .split{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:end}
+  .quote{font-size:clamp(24px,2.6vw,36px);line-height:1.2;letter-spacing:-.01em;max-width:520px}
+  .quote small{display:block;margin-top:20px}
+  @media (max-width:880px){.split{grid-template-columns:1fr}}
+
+  /* REACH */
+  .reach{display:grid;grid-template-columns:1.2fr .8fr;gap:0;margin-top:72px;border:1px solid var(--line);background:var(--white)}
+  .reach .total{padding:56px;border-right:1px solid var(--line);display:flex;flex-direction:column;justify-content:space-between;gap:40px}
+  .reach .total b{font-weight:400;font-size:clamp(88px,13vw,190px);letter-spacing:-.05em;line-height:.85;display:block}
+  .reach .vs{padding:56px;display:flex;flex-direction:column;justify-content:center;gap:28px}
+  .bar{height:10px;background:var(--line);position:relative}
+  .bar span{position:absolute;inset:0 auto 0 0;background:var(--ink)}
+  .bar-row{display:flex;justify-content:space-between;font-size:12px;letter-spacing:.08em;text-transform:uppercase;margin-bottom:10px}
+  .bar-row span:last-child{color:var(--muted)}
+  @media (max-width:880px){.reach{grid-template-columns:1fr}.reach .total{border-right:0;border-bottom:1px solid var(--line)}.reach .total,.reach .vs{padding:32px}}
+
+  /* WHY */
+  .why{display:grid;grid-template-columns:repeat(2,1fr);margin-top:72px;border-top:1px solid var(--ink)}
+  .why div{padding:40px 40px 40px 0;border-bottom:1px solid var(--line)}
+  .why div:nth-child(even){padding:40px 0 40px 40px;border-left:1px solid var(--line)}
+  .why .n{font-size:11px;letter-spacing:.18em;color:var(--muted)}
+  .why h3{font-size:clamp(24px,2.4vw,32px);margin:18px 0 12px;line-height:1.1}
+  .why p{color:var(--muted);max-width:460px}
+  @media (max-width:880px){.why{grid-template-columns:1fr}.why div,.why div:nth-child(even){padding:32px 0;border-left:0}}
+
+  /* TALENT */
+  .talent-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:72px;margin-top:72px;align-items:start}
+  .talent-card{background:var(--ink);color:var(--white);aspect-ratio:4/5;display:flex;flex-direction:column;justify-content:space-between;padding:32px}
+  .talent-card .kicker{color:#B8B8B5}
+  .talent-card .big{font-size:clamp(52px,6.4vw,96px);line-height:.92;letter-spacing:-.03em}
+  .talent-card .verified{display:inline-flex;gap:8px;align-items:center}
+  .facts{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--line)}
+  .facts a{display:block;padding:28px 0;border-bottom:1px solid var(--line);text-decoration:none;transition:.2s}
+  .facts a:nth-child(odd){padding-right:24px;border-right:1px solid var(--line)}
+  .facts a:nth-child(even){padding-left:24px}
+  .facts a:hover b{color:var(--muted)}
+  .facts b{display:block;font-weight:400;font-size:clamp(36px,4vw,56px);letter-spacing:-.03em;margin:8px 0 4px;transition:.2s}
+  .facts small{font-size:13px;color:var(--muted)}
+  @media (max-width:880px){.talent-grid{grid-template-columns:1fr}}
+
+  /* STEPS */
+  .steps{list-style:none;margin-top:72px;display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid var(--ink)}
+  .steps li{padding:28px 22px 0 0}
+  .steps .n{font-size:11px;letter-spacing:.18em;color:var(--muted)}
+  .steps h3{font-size:22px;margin:22px 0 10px;letter-spacing:-.01em;line-height:1.15}
+  .steps p{font-size:14px;color:var(--muted)}
+  @media (max-width:980px){.steps{grid-template-columns:1fr 1fr}.steps li{padding-bottom:28px}}
+  @media (max-width:560px){.steps{grid-template-columns:1fr}}
+
+  /* KITS */
+  .kits-head{display:flex;justify-content:space-between;align-items:end;gap:40px;flex-wrap:wrap}
+  .kit-tabs{display:flex;border:1px solid var(--ink)}
+  .kit-tabs button{font:inherit;font-size:11px;letter-spacing:.16em;text-transform:uppercase;background:transparent;border:0;padding:14px 22px;cursor:pointer;color:var(--ink)}
+  .kit-tabs button+button{border-left:1px solid var(--ink)}
+  .kit-tabs button[aria-selected="true"]{background:var(--ink);color:var(--white)}
+  .kit{display:none;grid-template-columns:1.1fr .9fr;margin-top:56px;border:1px solid var(--line);background:var(--white)}
+  .kit.on{display:grid;animation:fade .5s ease}
+  .kit .pics{display:grid;grid-template-columns:1fr 1fr;border-right:1px solid var(--line)}
+  .kit .pics figure{aspect-ratio:1;display:flex;align-items:center;justify-content:center;padding:24px;position:relative}
+  .kit .pics figure+figure{border-left:1px solid var(--line)}
+  .kit .pics figure img{mix-blend-mode:multiply;max-height:100%;object-fit:contain}
+  .kit .pics figcaption{position:absolute;left:16px;bottom:14px;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+  .kit .info{padding:48px;display:flex;flex-direction:column;gap:22px;justify-content:center}
+  .kit .info h3{font-size:clamp(32px,3.4vw,48px)}
+  .kit .for{font-size:19px;line-height:1.35}
+  .kit .contents{list-style:none;border-top:1px solid var(--line)}
+  .kit .contents li{display:flex;justify-content:space-between;gap:16px;padding:14px 0;border-bottom:1px solid var(--line);font-size:13px;letter-spacing:.06em;text-transform:uppercase}
+  .kit .contents li span:last-child{color:var(--muted);white-space:nowrap}
+  .kit .moment{font-size:14px;color:var(--muted);padding-left:16px;border-left:1px solid var(--ink)}
+  @keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+  @media (max-width:880px){.kit{grid-template-columns:1fr}.kit .pics{border-right:0;border-bottom:1px solid var(--line)}.kit .info{padding:32px}}
+  .note{margin-top:28px;font-size:12px;letter-spacing:.06em;color:var(--muted)}
+
+  /* VIDEOS */
+  .videos{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:64px}
+  .video{background:var(--ink);aspect-ratio:9/16;position:relative;overflow:hidden;border:1px solid var(--line)}
+  .video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+  .video-cap{display:flex;justify-content:space-between;margin-top:12px}
+  .video-cap a{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);text-decoration:none}
+  .video-cap a:hover{color:var(--ink)}
+  @media (max-width:980px){.videos{grid-template-columns:1fr 1fr}}
+  @media (max-width:520px){.videos{grid-template-columns:1fr}}
+
+  /* STORYBOARD */
+  .board{display:grid;grid-template-columns:repeat(4,1fr);margin-top:64px;border:1px solid var(--line);background:var(--white)}
+  .frame{padding:28px;border-right:1px solid var(--line);display:flex;flex-direction:column;gap:18px}
+  .frame:last-child{border-right:0}
+  .frame .screen{aspect-ratio:9/16;background:var(--bg);border:1px solid var(--line);display:flex;flex-direction:column;justify-content:space-between;padding:16px;position:relative;overflow:hidden}
+  .frame .screen .tc{font-size:10px;letter-spacing:.14em;color:var(--muted);display:flex;justify-content:space-between;position:relative;z-index:1}
+  .frame .screen .ost{font-size:15px;line-height:1.2;letter-spacing:-.01em;background:var(--white);padding:10px 12px;align-self:flex-start;max-width:92%;position:relative;z-index:1}
+  .frame .screen img{position:absolute;inset:0;margin:auto;width:62%;height:auto;max-height:55%;object-fit:contain;mix-blend-mode:multiply}
+  .frame h3{font-size:18px;letter-spacing:-.01em}
+  .frame p{font-size:13px;color:var(--muted)}
+  @media (max-width:980px){.board{grid-template-columns:1fr 1fr}.frame:nth-child(2){border-right:0}.frame:nth-child(-n+2){border-bottom:1px solid var(--line)}}
+  @media (max-width:520px){.board{grid-template-columns:1fr}.frame{border-right:0;border-bottom:1px solid var(--line)}}
+
+  /* CLOSE */
+  .close{text-align:center;padding:180px 0}
+  .close h2{max-width:960px;margin:24px auto 32px}
+  .close .lead{margin:0 auto 44px;color:var(--muted)}
+  .close .ctas{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+  footer{border-top:1px solid var(--line);padding:28px 0;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+  footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+
+  .rv{opacity:0;transform:translateY(18px);transition:opacity .8s ease,transform .8s ease}
+  .rv.in{opacity:1;transform:none}
+  @media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}.kit.on{animation:none}}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="lockup" href="#portada" aria-label="CHER × Nacho Mer">
+      <img src="assets/cher-logo.png" alt="CHER">
+      <span class="x">×</span><span class="talent">Nacho Mer</span>
+    </a>
+    <ul>
+      <li><a href="#idea">La idea</a></li>
+      <li><a href="#alcance">El alcance</a></li>
+      <li><a href="#nacho">Nacho</a></li>
+      <li><a href="#momento">El momento</a></li>
+      <li><a href="#kits">Los kits</a></li>
+      <li><a href="#hoy">Hoy</a></li>
+      <li><a href="#video">El video</a></li>
+    </ul>
+  </div>
+  <div class="progress" id="progress"></div>
+</header>
+
+<main>
+
+<!-- PORTADA -->
+<section class="hero" id="portada">
+  <div class="copy">
+    <span class="kicker">Una propuesta de BIG para CHER</span>
+    <div>
+      <h1>El perfume<br>de sus 15<br>es <em>CHER.</em></h1>
+      <p class="sub" style="margin-top:28px">Cada fin de semana, Nacho Mer se escapa un rato de la pista con la cumpleañera, micrófono en mano, para charlar a cámara y hacerle un regalo. Queremos que ese regalo sea un kit CHER.</p>
+    </div>
+    <a class="scroll" href="#idea">Ver la propuesta</a>
+  </div>
+  <div class="media">
+    <img src="assets/cofre-onyx.webp" alt="Cofre CHER Onyx EDP 100 ml + Body Splash 50 ml">
+    <div class="tag"><span class="kicker">Cofre CHER Onyx</span><span class="kicker">El regalo de la noche</span></div>
+  </div>
+</section>
+
+<!-- LA IDEA -->
+<section id="idea">
+  <div class="wrap">
+    <span class="kicker rv">La idea</span>
+    <div class="split" style="margin-top:28px">
+      <h2 class="rv">Los 15 se viven una noche.<br><em>El perfume la trae de vuelta.</em></h2>
+      <div class="rv">
+        <p class="quote">A los 15 ya tienen perfumes. Lo que no tienen es el perfume de esa noche. Cada vez que se ponga CHER, vuelve a sus 15.<small class="kicker">El insight</small></p>
+      </div>
+    </div>
+    <p class="lead rv" style="margin-top:72px">En plena fiesta, Nacho se lleva a la cumpleañera y a su mejor amiga a un pasillo, al ascensor o al backstage. Charlan a cámara, le pregunta qué perfume usa y le da un <b>kit CHER</b>. Ella lo abre, se perfuma, perfuma a su amiga y vuelve a la pista oliendo a CHER. Esa charla se convierte en un TikTok que miran millones de chicas de su edad.</p>
+  </div>
+</section>
+
+<!-- ALCANCE -->
+<section id="alcance">
+  <div class="wrap">
+    <span class="kicker rv">El alcance</span>
+    <h2 class="rv" style="margin-top:28px">Una comunidad 30 veces<br><em>más grande que la de CHER.</em></h2>
+    <div class="reach rv">
+      <div class="total">
+        <span class="kicker">Comunidad total de Nacho Mer</span>
+        <div><b>4,6 M</b><p class="body" style="margin-top:18px">seguidores sumando TikTok, Instagram y YouTube, en la misma edad y el mismo momento de vida que la clienta de CHER Beauty.</p></div>
+      </div>
+      <div class="vs">
+        <div><div class="bar-row"><span>Nacho Mer</span><span>4,6 M</span></div><div class="bar"><span style="width:100%"></span></div></div>
+        <div><div class="bar-row"><span>@cherbeautyok</span><span>141 K</span></div><div class="bar"><span style="width:3.06%"></span></div></div>
+        <p class="body" style="font-size:14px">Con una sola acción, CHER Beauty llega a una audiencia que hoy no alcanza con su cuenta propia.</p>
+      </div>
+    </div>
+
+    <div class="why">
+      <div class="rv"><span class="n">01</span><h3>El público exacto</h3><p>Chicas de 15, sus amigas y sus mamás. Ya compran perfumería, prueban marcas y eligen qué usar según lo que ven en TikTok.</p></div>
+      <div class="rv"><span class="n">02</span><h3>El producto como protagonista</h3><p>Lejos del ruido de la pista, el kit está en primer plano: lo abren a cámara, lo prueban y lo comentan, sin nada que le robe la atención.</p></div>
+      <div class="rv"><span class="n">03</span><h3>Recomendación real</h3><p>No es una publicidad, es una charla en una fiesta real. Ella y su amiga lo huelen y dicen qué les parece, y eso se transmite como deseo: «yo también quiero ese perfume».</p></div>
+      <div class="rv"><span class="n">04</span><h3>Un formato probado</h3><p>Nacho ya regala perfumes en estas charlas y la audiencia los consume y los comparte: uno de sus últimos videos sumó 87,8 K likes, 1.872 guardados y 1.051 compartidos. CHER se suma a algo que funciona.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- NACHO -->
+<section id="nacho">
+  <div class="wrap">
+    <span class="kicker rv">El talento</span>
+    <h2 class="rv" style="margin-top:28px">Nacho Mer.<br><em>El que hace explotar la pista.</em></h2>
+    <div class="talent-grid">
+      <div class="talent-card rv">
+        <span class="kicker verified">@inachomer · Cuenta verificada</span>
+        <div>
+          <div class="big">Nacho<br>Mer</div>
+          <p class="kicker" style="margin-top:18px">«Creando momentos inolvidables»</p>
+        </div>
+      </div>
+      <div class="rv">
+        <p class="lead">Nacho anima fiestas de 15 y tiene un formato propio: en algún momento de la noche se lleva a la cumpleañera fuera del salón, charla con ella a cámara y le regala productos de beauty. Lo filma como un vlog y lo comparte con millones de personas.</p>
+        <p class="body" style="margin-top:20px">CHER ya aparece en esos regalos de forma orgánica. La propuesta es que el kit CHER sea el regalo de cada charla.</p>
+        <div class="facts" style="margin-top:44px">
+          <a href="https://www.tiktok.com/@inachitomer" target="_blank" rel="noopener"><span class="kicker">TikTok ↗</span><b>3,2 M</b><small>seguidores · @inachitomer</small></a>
+          <a href="https://www.tiktok.com/@inachitomer" target="_blank" rel="noopener"><span class="kicker">Likes en TikTok ↗</span><b>174 M</b><small>en más de 1.200 videos</small></a>
+          <a href="https://www.instagram.com/inachomer/" target="_blank" rel="noopener"><span class="kicker">Instagram ↗</span><b>853 K</b><small>seguidores · @inachomer</small></a>
+          <a href="https://www.youtube.com/inachomer" target="_blank" rel="noopener"><span class="kicker">YouTube ↗</span><b>560 K</b><small>suscriptores · @iNachoMer</small></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EL MOMENTO -->
+<section id="momento">
+  <div class="wrap">
+    <span class="kicker rv">El momento</span>
+    <h2 class="rv" style="margin-top:28px">Cinco pasos.<br><em>Una charla que huele a CHER.</em></h2>
+    <ol class="steps">
+      <li class="rv"><span class="n">01</span><h3>Se la lleva un rato</h3><p>En plena fiesta, Nacho busca a la cumpleañera y se la lleva fuera del salón con su mejor amiga.</p></li>
+      <li class="rv"><span class="n">02</span><h3>La charla</h3><p>Micrófono en mano, le pregunta cómo viene la noche, quién es su amiga y qué perfume usa.</p></li>
+      <li class="rv"><span class="n">03</span><h3>Aparece el cofre CHER</h3><p>Nacho saca el regalo y se lo da: «Te traje algo para esta noche».</p></li>
+      <li class="rv"><span class="n">04</span><h3>Lo abre y lo prueba</h3><p>Abre el kit a cámara, se perfuma, perfuma a su amiga y lo comentan entre las dos.</p></li>
+      <li class="rv"><span class="n">05</span><h3>Vuelve a la pista</h3><p>Ella vuelve a la fiesta oliendo a CHER, y la charla se publica en TikTok para toda la comunidad de Nacho.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- LOS KITS -->
+<section id="kits">
+  <div class="wrap">
+    <div class="kits-head">
+      <div>
+        <span class="kicker rv">Los kits</span>
+        <h2 class="rv" style="margin-top:28px">Un kit CHER para<br><em>cada cumpleañera.</em></h2>
+      </div>
+      <div class="kit-tabs rv" role="tablist" aria-label="Elegí un kit">
+        <button role="tab" aria-selected="true" aria-controls="kit-onyx" data-kit="kit-onyx">Onyx</button>
+        <button role="tab" aria-selected="false" aria-controls="kit-elixir" data-kit="kit-elixir">Onyx Elixir</button>
+        <button role="tab" aria-selected="false" aria-controls="kit-rocket" data-kit="kit-rocket">Dieciocho Rocket</button>
+      </div>
+    </div>
+
+    <article class="kit on" id="kit-onyx" role="tabpanel">
+      <div class="pics">
+        <figure><img src="assets/onyx-100.webp" alt="Perfume CHER Onyx 100 ml"><figcaption>Onyx EDP 100 ml</figcaption></figure>
+        <figure><img src="assets/onyx-body-splash.webp" alt="CHER Onyx Body Splash"><figcaption>Onyx Body Splash</figcaption></figure>
+      </div>
+      <div class="info">
+        <span class="kicker">Kit 01 · El clásico</span>
+        <h3>Kit Onyx</h3>
+        <p class="for">Para la cumpleañera que quiere que el perfume de sus 15 la acompañe mucho después de la fiesta.</p>
+        <ul class="contents">
+          <li><span>Onyx EDP 100 ml</span><span>Perfume</span></li>
+          <li><span>Onyx Body Splash 50 ml</span><span>Splash</span></li>
+          <li><span>Cofre CHER</span><span>Presentación de regalo</span></li>
+        </ul>
+        <p class="moment">Nacho: «Cada vez que te lo pongas, volvés a esta noche.»</p>
+      </div>
+    </article>
+
+    <article class="kit" id="kit-elixir" role="tabpanel">
+      <div class="pics">
+        <figure><img src="assets/onyx-elixir-100.webp" alt="Perfume CHER Onyx Elixir 100 ml"><figcaption>Onyx Elixir EDP 100 ml</figcaption></figure>
+        <figure><img src="assets/cofre-onyx-elixir.webp" alt="Cofre CHER Onyx Elixir"><figcaption>Cofre Onyx Elixir</figcaption></figure>
+      </div>
+      <div class="info">
+        <span class="kicker">Kit 02 · La protagonista</span>
+        <h3>Kit Onyx Elixir</h3>
+        <p class="for">Para la que entró con el vals y salió en el carnaval. Es la versión más intensa.</p>
+        <ul class="contents">
+          <li><span>Onyx Elixir EDP 100 ml</span><span>Perfume</span></li>
+          <li><span>Body Splash 50 ml</span><span>Splash</span></li>
+          <li><span>Cofre CHER</span><span>Presentación de regalo</span></li>
+        </ul>
+        <p class="moment">Nacho: «La reina de la noche necesita su perfume.»</p>
+      </div>
+    </article>
+
+    <article class="kit" id="kit-rocket" role="tabpanel">
+      <div class="pics">
+        <figure><img src="assets/rocket-100.webp" alt="CHER Dieciocho Rocket 100 ml EDP"><figcaption>Dieciocho Rocket EDP</figcaption></figure>
+        <figure><img src="assets/cofre-rocket.webp" alt="Cofre CHER Dieciocho Rocket + Hyaluron Lip Balm"><figcaption>Cofre Rocket + Lip Balm</figcaption></figure>
+      </div>
+      <div class="info">
+        <span class="kicker">Kit 03 · La que va por más</span>
+        <h3>Kit Dieciocho Rocket</h3>
+        <p class="for">Cumple 15, pero ya piensa en los 18. Fresco, juvenil y con lip balm para retocarse antes de volver a la pista.</p>
+        <ul class="contents">
+          <li><span>Dieciocho Rocket EDP 100 ml</span><span>Perfume</span></li>
+          <li><span>Hyaluron Lip Balm</span><span>Labios</span></li>
+          <li><span>Cofre CHER</span><span>Presentación de regalo</span></li>
+        </ul>
+        <p class="moment">Nacho: «Para que llegues a los 18 oliendo a esta noche.»</p>
+      </div>
+    </article>
+    <p class="note rv">Kits armados con los cofres actuales de CHER Beauty, sin desarrollar productos nuevos.</p>
+  </div>
+</section>
+
+<!-- HOY -->
+<section id="hoy">
+  <div class="wrap">
+    <span class="kicker rv">Así se ve hoy</span>
+    <h2 class="rv" style="margin-top:28px">El formato ya funciona.<br><em>Solo falta CHER.</em></h2>
+    <p class="lead rv" style="margin-top:28px">Estos son videos reales de Nacho charlando con cumpleañeras y regalándoles perfumes en sus fiestas de 15. El video para CHER usa este mismo formato, con el kit CHER como el regalo.</p>
+    <div class="videos">
+      <div class="rv"><div class="video"><iframe src="https://www.tiktok.com/player/v1/7711051429762387221?music_info=1&description=0&controls=1" title="Nacho Mer: video 1" allow="encrypted-media; fullscreen" loading="lazy"></iframe></div><div class="video-cap"><span class="kicker">01</span><a href="https://www.tiktok.com/@inachitomer/video/7711051429762387221" target="_blank" rel="noopener">Ver en TikTok ↗</a></div></div>
+      <div class="rv"><div class="video"><iframe src="https://www.tiktok.com/player/v1/7697707627911957761?music_info=1&description=0&controls=1" title="Nacho Mer: video 2" allow="encrypted-media; fullscreen" loading="lazy"></iframe></div><div class="video-cap"><span class="kicker">02</span><a href="https://www.tiktok.com/@inachitomer/video/7697707627911957761" target="_blank" rel="noopener">Ver en TikTok ↗</a></div></div>
+      <div class="rv"><div class="video"><iframe src="https://www.tiktok.com/player/v1/7711835077306633492?music_info=1&description=0&controls=1" title="Nacho Mer: video 3" allow="encrypted-media; fullscreen" loading="lazy"></iframe></div><div class="video-cap"><span class="kicker">03</span><a href="https://www.tiktok.com/@inachitomer/video/7711835077306633492" target="_blank" rel="noopener">Ver en TikTok ↗</a></div></div>
+      <div class="rv"><div class="video"><iframe src="https://www.tiktok.com/player/v1/7710300417837567253?music_info=1&description=0&controls=1" title="Nacho Mer: video 4" allow="encrypted-media; fullscreen" loading="lazy"></iframe></div><div class="video-cap"><span class="kicker">04</span><a href="https://www.tiktok.com/@inachitomer/video/7710300417837567253" target="_blank" rel="noopener">Ver en TikTok ↗</a></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- EL VIDEO CHER -->
+<section id="video">
+  <div class="wrap">
+    <span class="kicker rv">La pieza final</span>
+    <h2 class="rv" style="margin-top:28px">El video CHER.<br><em>Cuatro escenas, menos de un minuto.</em></h2>
+    <div class="board">
+      <div class="frame rv">
+        <div class="screen"><div class="tc"><span>00:00</span><span>01</span></div><span class="ost">«Me robé a la cumpleañera un ratito»</span></div>
+        <h3>La escapada</h3><p>Nacho, micrófono en mano, se lleva a la cumpleañera y a su amiga fuera del salón. El gancho está en los primeros 2 segundos.</p>
+      </div>
+      <div class="frame rv">
+        <div class="screen"><div class="tc"><span>00:08</span><span>02</span></div><span class="ost">«¿Qué perfume usás?»</span></div>
+        <h3>La charla</h3><p>Cómo viene la noche, quién es su amiga, qué perfume usa. La pregunta abre la puerta al regalo.</p>
+      </div>
+      <div class="frame rv">
+        <div class="screen"><div class="tc"><span>00:20</span><span>03</span></div><img src="assets/cofre-onyx.webp" alt=""><span class="ost">«Te traje algo» 🤍</span></div>
+        <h3>El regalo</h3><p>Aparece el cofre CHER y lo abre a cámara, con el logo en primer plano. Es el corazón del video.</p>
+      </div>
+      <div class="frame rv">
+        <div class="screen"><div class="tc"><span>00:45</span><span>04</span></div><img src="assets/onyx-100.webp" alt=""><span class="ost">El perfume de sus 15</span></div>
+        <h3>El primer spray de la noche</h3><p>Se perfuma, perfuma a su amiga, lo comentan y vuelven a la pista. Cierra con el tag a @cherbeautyok, en colaboración con la cuenta de CHER.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CIERRE -->
+<section class="close">
+  <div class="wrap">
+    <span class="kicker rv">CHER × Nacho Mer</span>
+    <h2 class="rv">CHER, ¿le regalamos<br>el perfume de <em>sus 15?</em></h2>
+    <p class="lead rv">Si les gusta la idea, definimos juntos los kits, las fiestas y las fechas. Nacho y la cumpleañera hacen el resto.</p>
+    <div class="ctas rv">
+      <a class="btn" href="#kits">Ver los kits</a>
+      <a class="btn ghost" href="#hoy">Ver los videos</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap"><span>BIG × CHER</span><span>El perfume de sus 15 · 2026</span></div>
+</footer>
+
+<script>
+  const bar=document.getElementById('progress');
+  const links=[...document.querySelectorAll('.nav ul a')];
+  const secs=links.map(a=>document.querySelector(a.getAttribute('href')));
+  function onScroll(){
+    const h=document.documentElement;
+    bar.style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%';
+    let cur=-1;secs.forEach((s,i)=>{if(s&&s.getBoundingClientRect().top<160)cur=i});
+    links.forEach((a,i)=>a.classList.toggle('on',i===cur));
+  }
+  addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+  document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+
+  const tabs=[...document.querySelectorAll('.kit-tabs button')];
+  tabs.forEach(t=>t.addEventListener('click',()=>{
+    tabs.forEach(b=>b.setAttribute('aria-selected',b===t));
+    document.querySelectorAll('.kit').forEach(k=>k.classList.toggle('on',k.id===t.dataset.kit));
+  }));
+</script>
+</body>
+</html>
